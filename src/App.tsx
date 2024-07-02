@@ -4,8 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>learn react</h1>
+    <div data-test="component-app">
+      <h1 data-test="counter-display">the counter is available</h1>
+      <button data-test="increment-button">Increment Button</button>
     </div>
   );
 }
