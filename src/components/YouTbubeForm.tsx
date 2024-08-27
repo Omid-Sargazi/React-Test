@@ -22,7 +22,7 @@ export const YouTbubeForm = () => {
     <>
       <div>
         <h1>YouTube Form({renderCount / 2})</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <label htmlFor="username">UserName</label>
           <input
             type="text"
@@ -31,13 +31,19 @@ export const YouTbubeForm = () => {
             ref={ref}
             onChange={onChange}
             onBlur={onBlur}
+            
           />
 
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" {...register("email")} />
+          <input type="email" id="email" {...register("email",{required:"Password is required."})} />
 
           <label htmlFor="channel">Channel</label>
-          <input type="text" id="channel" {...register("channel")} />
+          <input type="text" id="channel" {...register("channel",{
+            required:{
+              value:true,
+              message:"Username is required."
+            }
+          })} />
 
           <button>Submit</button>
         </form>
