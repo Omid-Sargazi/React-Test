@@ -40,6 +40,7 @@ label {
   font-weight: bold;
   display: flex;
   margin-bottom: 5px;
+  color: #000;
 }
 
 input[type="text"],
@@ -51,7 +52,7 @@ input[type="data"] {
   padding: 6px 12px;
   font: size 14px;
   line-height: 1.42;
-  color: #fff;
+  color: #0000;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
